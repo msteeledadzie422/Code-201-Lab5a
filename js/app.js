@@ -51,12 +51,9 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) { //eslint-disable-line
-    sum(8,8);
-    let number3 = number
-    multiply(70*2);
-    let number4 = number2
-    console.log([number3, number4, a + ' and ' + b + ' and ' + c + ' sum to ' + number3 + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + number4 + '.']);
-    return [number3, number4, a + ' and ' + b + ' and ' + c + ' sum to ' + number3 + '.', 'The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + number4 + '.']
+    let number3 = sum(sum(a,b)[0],c)[0];
+    let number4 = multiply(multiply(a,b)[0],c)[0];
+    return [number3, number4, `${a} and ${b} and ${c} sum to ${number3}.`, `The product of ${a} and ${b} and ${c} is ${number4}.`];
 }
 
 sumAndMultiply(4,7,5)
